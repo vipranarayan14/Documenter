@@ -1,33 +1,8 @@
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+@page {
+    size: A4;
 }
-html,
 body {
-    margin: 0;
+    background-color: white;
     padding: 0;
-    height: 100%;
-    width: 100%;
-}
-.container {
     margin: 0;
-    padding: 0;
-    height: 100%;
-}
-.editorToggler {
-    display: none;
-}
-.pad {
-    height: 100%;
-    margin: auto;
-}
-
-.editorPad {
-    display: none;
-}
-
-.viewerPad {
-    width: 100%;
-    background-color: red;
 }

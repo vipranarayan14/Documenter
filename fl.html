@@ -5,32 +5,59 @@
     <title>Flex</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="print.css" media="print">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        
+    <nav class="toolBar">
         <!-- Toggle Button -->
-        <div class="editorToggler"><button>Toggle Editor</button></div>
-        
+        <div class="tool editorToggler"><button onclick="toggleEditor()">Toggle Editor</button></div>
+        <div class="tool pagesPrinter"><button onclick="printContent('pageContainer')">Print</button></div>
+        </nav>
+    
+    <div class="container">
         <!-- Editor -->
         <div class="pad editorPad">
             <div class="editor">
-                <div class="codeInput"></div>
+                <textarea id="codeInput" class="codeInput" oninput="updatePage()"></textarea>
             </div>
         </div>
         
         <!-- Viewer -->
         <div class="pad viewerPad">
-            <div class="pagesContainer">
-                <div class="page">
+            <div id="pageContainer" class="pagesContainer">
+                <div class="page" >
                     <div class="pageBorder">
                         <div class="content"></div>
+                        <p>Hi</p>
+                <h1> Hello </h1>
+                <p>Lorem ipsum convallis tincidunt mollis per curabitur mollis hendrerit, blandit velit mi leo aenean ligula odio luctus ultricies, risus eget aenean imperdiet senectus ultrices felis aliquet nisl sem ut interdum neque ut ipsum quis etiam, tellus dolor mauris vulputate massa sem pellentesque aliquet, curabitur suspendisse consectetur vivamus dui sociosqu torquent nisi. Eleifend mattis condimentum integer risus iaculis integer, tincidunt adipiscing luctus eros elementum auctor faucibus, tempor luctus varius conubia scelerisque libero donec etiam inceptos donec sit ac velit nisl iaculis leo, consequat consectetur lacinia ut sem suscipit pellentesque feugiat fringilla.</p>
+                <p>Congue aliquam donec mi vulputate velit urna habitasse, fringilla blandit sapien dictumst mauris fames, sem nec enim sociosqu aliquam nunc rhoncus orci sed tortor adipiscing massa porta enim nullam ante molestie massa potenti ut. Nullam in odio quisque eget ultrices mauris sodales vestibulum hendrerit etiam eros venenatis eget, nam sed pharetra quam ad gravida ultrices senectus tempor primis ligula nisi posuere consectetur nullam viverra malesuada etiam, gravida arcu gravida ipsum lectus, feugiat eget id himenaeos arcu cubilia sociosqu lorem dictum sit donec elit volutpat aliquam, phasellus est laoreet vel quisque semper bibendum torquent aliquet, sit purus luctus sit curabitur nisl tellus.</p>
+                <p>Interdum adipiscing erat consequat varius sociosqu class porttitor pulvinar, convallis torquent auctor egestas luctus lectus amet etiam accumsan, eu libero porta a aliquam condimentum ut ornare fusce maecenas congue lacus taciti etiam nullam leo nec, ullamcorper rhoncus facilisis iaculis metus sed tempor etiam nostra, metus integer blandit ut nibh vestibulum sociosqu elementum posuere vestibulum nisi elit posuere est aliquam imperdiet purus, lacus duis commodo integer adipiscing sit fermentum nisi tellus, risus sociosqu felis aliquet congue libero posuere. Lorem maecenas venenatis euismod fames velit sollicitudin curabitur libero, cubilia potenti tristique viverra eget feugiat gravida, vel rhoncus eros vel aliquam arcu luctus ipsum enim ante tristique vestibulum eu quisque ullamcorper placerat aptent, faucibus urna leo elit potenti ad lacinia condimentum sodales congue, suspendisse commodo neque purus curabitur class elit fermentum dictum porta fusce habitasse lorem aenean tempor nulla, scelerisque et primis consequat nunc tincidunt, per vulputate lorem adipiscing diam quis volutpat vehicula netus dolor iaculis aenean, nulla senectus elementum curabitur donec, hac dictum a dictumst.</p>
+                <p>Duis laoreet arcu consequat dapibus auctor dictum, cubilia arcu hac tempus convallis potenti vehicula, rhoncus ipsum fusce pharetra ligula pellentesque pharetra aptent bibendum phasellus lorem est vivamus commodo eleifend primis nisi enim cursus aliquam consectetur, metus non himenaeos viverra consectetur feugiat risus auctor nisl enim adipiscing convallis quisque eget aptent litora lorem etiam. Magna molestie aliquet nibh mi facilisis quis taciti augue, duis tellus rhoncus vestibulum non varius scelerisque, imperdiet lacus turpis molestie nunc nib.</p>
+                <table style="width:100%">
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Age</th>
+                    </tr>
+                    <tr>
+                        <td>Jill</td>
+                        <td>Smith</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>Eve</td>
+                        <td>Jackson</td>
+                        <td>94</td>
+                    </tr>
+                </table>
                     </div>
                 </div>
                 <div class="page">
                     <div class="pageBorder">
                         <div class="content"></div>
+                        Hello
                     </div>
                 </div>
             </div>
