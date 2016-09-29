@@ -1,0 +1,61 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f0e68c;
+    border: 1px solid black;
+}
+.editorToggler {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    z-index: 1000;
+}
+.pad {    
+    height: 100%;
+    margin: auto;
+}
+
+.editorPad {
+    width: 35%;
+    background-color: blue;
+    /* display:none; */
+}
+
+.viewerPad {
+    width: 65%;
+    background-color: red;
+}
+
+.pagesContainer {
+    overflow: scroll;
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    background-color: green;
+}
+.page {
+    max-height: 297mm;
+    max-width: 210mm;
+    min-height: 297mm;
+    min-width: 210mm;
+    margin: auto;
+    background-color: white;
+    margin-top: 20px;
+}
+.pageBorder {
+    /**/
+}
