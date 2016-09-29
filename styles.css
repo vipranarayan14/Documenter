@@ -38,10 +38,10 @@ body {
 }
 
 .editorPad {
-    display: flex;
+    /* display: flex; */
     width: 35%;
     background-color: blue;
-    /* display:none; */
+    display:none;
 }
 .editor {
     display: flex;
@@ -79,8 +79,10 @@ body {
     margin-bottom: 10px;
 }
 .pageBorder {
-    height: 100%;   
+    height: 284.3; 
+    width: 100%;
     margin: 12.7mm;
+    max-width: 100%;
     padding: 5.08mm;
     border: 1px solid black;
 }
