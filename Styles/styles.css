@@ -17,7 +17,8 @@ body {
     margin: 0;
     padding: 0;
     height: 95%;
-    background-color: #f05464;
+    /* background-color: #f05464; */
+    background-color: rgb(204, 204, 204);
 }
 .toolBar {
     display: flex;
@@ -40,7 +41,8 @@ body {
 .editorPad {
     /* display: flex; */
     width: 35%;
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: rgb(204, 204, 204);
     display:none;
 }
 .editor {
@@ -56,8 +58,10 @@ body {
     margin: auto;
 }
 .viewerPad {
+    flex-grow: 1;
     width: 65%;
-    background-color: red;
+    /* background-color: red; */
+    background-color: rgb(204, 204, 204);
 }
 
 .pagesContainer {
@@ -65,7 +69,8 @@ body {
     height: 100%;
     width: 95%;
     margin: auto;
-    background-color: green;
+    /* background-color: green; */
+    background-color: rgb(204, 204, 204);
 }
 .page {
     display: flex;
@@ -77,6 +82,7 @@ body {
     background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 .pageBorder {
     height: 284.3; 
