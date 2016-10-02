@@ -1,0 +1,33 @@
+table {
+  width: 100%;  
+  border: solid thin; 
+  border-collapse: collapse; 
+}
+table caption { 
+  padding-bottom: 0.5em; 
+}
+table th, 
+table td { 
+  border: solid thin;
+  padding: 0.2rem 1rem;
+}
+table td {
+  white-space: nowrap;
+}
+table th { 
+  font-weight: normal; 
+}
+table td { 
+  border-style: solid thin; 
+  vertical-align: center; 
+}
+table th { 
+  text-decoration: bold;
+  padding: 0.5em; 
+  vertical-align: middle; 
+  text-align: center; 
+}
+
+table tbody td:first-child::after { 
+  content: leader(". "); '
+}
