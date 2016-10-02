@@ -12,11 +12,11 @@ function toggleEditor() {
     
 }
 
-
-function updatePage() {
-    var codeInput =  document.getElementById('codeInput').value;
-    document.getElementById('pageContainer').innerHTML = codeInput;
-}
+//If input is a textarea instead of Ace Editor
+//function updatePage() {
+//    var codeInput =  document.getElementById('codeInput').value;
+//    document.getElementById('pageContainer').innerHTML = codeInput;
+//}
 
 
 function printContent(el) {

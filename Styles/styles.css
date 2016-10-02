@@ -33,6 +33,13 @@ body {
     height: 80%;
     margin-left: 10px;
 }
+/* #editor {
+    border: 2px solid red;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: 3000px;
+}*/
 .pad {    
     height: 100%;
     margin: auto;
