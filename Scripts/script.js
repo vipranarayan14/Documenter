@@ -4,7 +4,8 @@ function toggleEditor() {
     
     if (e.style.display === 'none' || e.style.display === '') {
         e.style.display = 'flex';
-        document.getElementById('codeInput').value = document.getElementById('pageContainer').innerHTML;
+        //If input is a textarea instead of Ace Editor
+        //document.getElementById('codeInput').value = document.getElementById('pageContainer').innerHTML;
         
     } else {
         e.style.display = 'none';
