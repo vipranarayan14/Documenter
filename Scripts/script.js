@@ -59,6 +59,13 @@ function printContent(el) {
     document.getElementById('editorPad').style.display = "none";
 }
 
+function putHTML () {
+    var selectedTxt = window.getSelection().toString().trim();
+    console.log(selectedTxt);
+    if(selectedTxt) {
+        document.execCommand('insertHTML', false, selectedTxt);
+    }
+}
 //If input is a textarea instead of Ace Editor
 //function updatePage() {
 //    var codeInput =  document.getElementById('codeInput').value;
