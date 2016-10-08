@@ -15,8 +15,11 @@
    
    
     <nav class="toolBar">
-        <!-- Toggle Button -->
+        <!-- Toggle Button -->        
         <div class="tool editorToggler"><button onclick="toggleEditor()">Toggle Editor</button></div>
+        <div class="tool"><button onclick="reloadPageCode()">Reload Editor</button></div>
+        <div class="tool"><button onclick="saveChanges()">Save</button></div>
+        <div class="tool"><button onclick="javascript:document.execCommand('insertOrderedList')">Bold</button></div>
         <div class="tool pagesPrinter"><button onclick="printContent('pageContainer')">Print</button></div>
         </nav>
     
@@ -33,7 +36,7 @@
             <div id="pageContainer" class="pagesContainer">
                 <div class="page">
                     <div class="pageBorder">
-                        <div class="content">
+                        <div class="content" contenteditable>
                         <p>Hi</p>
                 <h1> Hello </h1>
                 <p>Lorem ipsum convallis tincidunt mollis per curabitur mollis hendrerit, blandit velit mi leo aenean ligula odio luctus ultricies, risus eget aenean imperdiet senectus ultrices felis aliquet nisl sem ut interdum neque ut ipsum quis etiam, tellus dolor mauris vulputate massa sem pellentesque aliquet, curabitur suspendisse consectetur vivamus dui sociosqu torquent nisi. Eleifend mattis condimentum integer risus iaculis integer, tincidunt adipiscing luctus eros elementum auctor faucibus, tempor luctus varius conubia scelerisque libero donec etiam inceptos donec sit ac velit nisl iaculis leo, consequat consectetur lacinia ut sem suscipit pellentesque feugiat fringilla.</p>

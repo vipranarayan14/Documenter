@@ -1,9 +1,20 @@
+window.onload = retrieveChanges;
+
+window.addEventListener('keydown', function(e) {
+    if(e.ctrlKey && e.keyCode === 83) {
+        e.preventDefault();
+        saveChanges();
+        reloadPageCode();
+    }
+});
+
 function toggleEditor() {
 
     var e = document.getElementById('editorPad');
 
     if (e.style.display === 'none' || e.style.display === '') {
         e.style.display = 'flex';
+        loadPageCode();
         //If input is a textarea instead of Ace Editor
         //document.getElementById('codeInput').value = document.getElementById('pageContainer').innerHTML;
 
@@ -14,12 +25,26 @@ function toggleEditor() {
 
 }
 
-//If input is a textarea instead of Ace Editor
-//function updatePage() {
-//    var codeInput =  document.getElementById('codeInput').value;
-//    document.getElementById('pageContainer').innerHTML = codeInput;
-//}
+function saveChanges() {
+    
+    var loS = localStorage.pages;
+    var loSSpace = (JSON.stringify(loS).length / 1024).toFixed(2);
+    
+    if (loSSpace > 20) {
+        alert('Storage Space exceeded!'+ '\n' +
+              'Alloted Space : 20 K' + '\n' +
+              'Demanding Space:' + loSSpace);
+    } else {
+    localStorage.pages = document.querySelector('#pageContainer').innerHTML.toString();
+        console.log(loSSpace + 'K used');
 
+    }
+}
+
+function retrieveChanges () {
+    document.querySelector('#pageContainer').innerHTML = "";
+    document.querySelector('#pageContainer').innerHTML = localStorage.pages;
+}
 
 function printContent(el) {
 
@@ -33,3 +58,10 @@ function printContent(el) {
     document.body.innerHTML = restorepage;
     document.getElementById('editorPad').style.display = "none";
 }
+
+//If input is a textarea instead of Ace Editor
+//function updatePage() {
+//    var codeInput =  document.getElementById('codeInput').value;
+//    document.getElementById('pageContainer').innerHTML = codeInput;
+//}
+

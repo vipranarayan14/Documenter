@@ -20,12 +20,19 @@ editor.setOptions({
 });
 editor.$blockScrolling = Infinity;
 
+function loadPageCode () {
 //Load page code
 editor.getSession().setValue(document.getElementById('pageContainer').innerHTML);
+}
 
+loadPageCode();
 
 //Update page code
 editor.addEventListener("input", function () {
     document.getElementById('pageContainer').innerHTML = editor.getSession().getValue();
 });
+
+function reloadPageCode () {
+loadPageCode();
+}
 
