@@ -3,72 +3,67 @@
 
 <head>
     <title>Documenter</title>
+    
     <link rel="stylesheet" type="text/css" href="Styles/styles.css">
     <link rel="stylesheet" type="text/css" href="Styles/default.css">
     <link rel="stylesheet" type="text/css" href="Styles/print.css" media="print">
+    
     <script src="Scripts/script.js"></script>   
     <script src="AceEditor/ace/ace.js"></script>
     <script src="AceEditor/ace/ext-language_tools.js"></script>
+    
 </head>
 
 <body>
    
-   
-    <nav class="toolBar">
-        <!-- Toggle Button -->        
+     <nav class="toolBar">    
         <div class="tool editorToggler"><button onclick="toggleEditor()">Toggle Editor</button></div>
-        <div class="tool"><button onclick="reloadPageCode()">Reload Editor</button></div>
         <div class="tool"><button onclick="saveChanges()">Save</button></div>
+        <div class="tool pagesPrinter"><button onclick="printPages()">Print</button></div>
+        <div class="tool"><button onclick="emptyLocalStorage()">Clear Storage</button></div>
+     </nav>
+        
+     <nav class="toolBar">
+        <div class="tool"><button onclick="insertNewPage()">New Page</button></div>
+        <div class="tool">
+        <button onclick="exc('insertHorizontalRule')">--</button>
+        <button onclick="exc('insertOrderedList')">1.</button>
+        <button onclick="exc('insertUnorderedList')">*</button>
+        <button onclick="exc('justifyLeft')">Left</button>
+        <button onclick="exc('justifyCenter')">Center</button>
+        <button onclick="exc('justifyRight')">Right</button>
+        </div>
+        <div class="tool putHeading">
+        <select onchange="formatTxt(this.value)">
+        <option value="">Select Formatting...</option>
+        <option value="p">Paragraph</option>
+        <option value="h1">Heading 1</option>
+        <option value="h2">Heading 2</option>
+        <option value="h3">Heading 3</option>
+        <option value="h4">Heading 4</option>
+        <option value="h5">Heading 5</option>
+        <option value="h6">Heading 6</option>
+        </select>
+        </div>
         <div class="tool"><button onclick="putHTML()">Insert HTML</button></div>
-        <div class="tool pagesPrinter"><button onclick="printContent('pageContainer')">Print</button></div>
-        </nav>
+      </nav>
     
     <div class="container">
         <!-- Editor -->
-        <div id="editorPad" class="pad editorPad">
-            <div class="editor">                
+        <div id="editorPad" class="pad editorPad">        		
+            <div class="editor">  
+				        <nav class="toolBar">
+				        		<div class="tool">
+				        				<button onclick="reloadPageCode()">Reload Editor</button>
+				        		</div>
+				        </nav>	           
                 <div id="editor" class="codeInput"></div>  
             </div>
         </div>
         
         <!-- Viewer -->
         <div class="pad viewerPad">
-            <div id="pageContainer" class="pagesContainer">
-                <div class="page">
-                    <div class="pageBorder">
-                        <div class="content" contenteditable>
-                        <p>Hi</p>
-                <h1> Hello </h1>
-                <p>Lorem ipsum convallis tincidunt mollis per curabitur mollis hendrerit, blandit velit mi leo aenean ligula odio luctus ultricies, risus eget aenean imperdiet senectus ultrices felis aliquet nisl sem ut interdum neque ut ipsum quis etiam, tellus dolor mauris vulputate massa sem pellentesque aliquet, curabitur suspendisse consectetur vivamus dui sociosqu torquent nisi. Eleifend mattis condimentum integer risus iaculis integer, tincidunt adipiscing luctus eros elementum auctor faucibus, tempor luctus varius conubia scelerisque libero donec etiam inceptos donec sit ac velit nisl iaculis leo, consequat consectetur lacinia ut sem suscipit pellentesque feugiat fringilla.</p>
-                <p>Congue aliquam donec mi vulputate velit urna habitasse, fringilla blandit sapien dictumst mauris fames, sem nec enim sociosqu aliquam nunc rhoncus orci sed tortor adipiscing massa porta enim nullam ante molestie massa potenti ut. Nullam in odio quisque eget ultrices mauris sodales vestibulum hendrerit etiam eros venenatis eget, nam sed pharetra quam ad gravida ultrices senectus tempor primis ligula nisi posuere consectetur nullam viverra malesuada etiam, gravida arcu gravida ipsum lectus, feugiat eget id himenaeos arcu cubilia sociosqu lorem dictum sit donec elit volutpat aliquam, phasellus est laoreet vel quisque semper bibendum torquent aliquet, sit purus luctus sit curabitur nisl tellus.</p>
-                <p>Interdum adipiscing erat consequat varius sociosqu class porttitor pulvinar, convallis torquent auctor egestas luctus lectus amet etiam accumsan, eu libero porta a aliquam condimentum ut ornare fusce maecenas congue lacus taciti etiam nullam leo nec, ullamcorper rhoncus facilisis iaculis metus sed tempor etiam nostra, metus integer blandit ut nibh vestibulum sociosqu elementum posuere vestibulum nisi elit posuere est aliquam imperdiet purus, lacus duis commodo integer adipiscing sit fermentum nisi tellus, risus sociosqu felis aliquet congue libero posuere. Lorem maecenas venenatis euismod fames velit sollicitudin curabitur libero, cubilia potenti tristique viverra eget feugiat gravida, vel rhoncus eros vel aliquam arcu luctus ipsum enim ante tristique vestibulum eu quisque ullamcorper placerat aptent, faucibus urna leo elit potenti ad lacinia condimentum sodales congue, suspendisse commodo neque purus curabitur class elit fermentum dictum porta fusce habitasse lorem aenean tempor nulla, scelerisque et primis consequat nunc tincidunt, per vulputate lorem adipiscing diam quis volutpat vehicula netus dolor iaculis aenean, nulla senectus elementum curabitur donec, hac dictum a dictumst.</p>
-                <p>Duis laoreet arcu consequat dapibus auctor dictum, cubilia arcu hac tempus convallis potenti vehicula, rhoncus ipsum fusce pharetra ligula pellentesque pharetra aptent bibendum phasellus lorem est vivamus commodo eleifend primis nisi enim cursus aliquam consectetur, metus non himenaeos viverra consectetur feugiat risus auctor nisl enim adipiscing convallis quisque eget aptent litora lorem etiam. Magna molestie aliquet nibh mi facilisis quis taciti augue, duis tellus rhoncus vestibulum non varius scelerisque, imperdiet lacus turpis molestie nunc nib.</p>
-                <table style="width:100%">
-                    <tr>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Age</th>
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>50</td>
-                    </tr>
-                    <tr>
-                        <td>Eve</td>
-                        <td>Jackson</td>
-                        <td>94</td>
-                    </tr>
-                </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="page">
-                    <div class="pageBorder">
-                        <div class="content"></div>
-                        Hello
-                    </div>
-                </div>
+            <div id="pageContainer" class="pagesContainer">                
             </div>
         </div>
     </div>

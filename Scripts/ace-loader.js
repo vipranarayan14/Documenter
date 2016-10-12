@@ -1,8 +1,10 @@
-// trigger extensions
-ace.require("ace/ext/language_tools");
-
 // Load Ace Editor
 var editor = ace.edit("editor");
+editor.$blockScrolling = Infinity;
+
+function loadAceEditor() {
+// trigger extensions
+ace.require("ace/ext/language_tools");
 
 // set Editor Mode
 editor.session.setMode("ace/mode/html");
@@ -16,16 +18,16 @@ editor.setOptions({
     fontSize: "12pt",
     enableBasicAutocompletion: true,
     enableSnippets: true,
-    enableLiveAutocompletion: true
+    enableLiveAutocompletion: true,
 });
-editor.$blockScrolling = Infinity;
-
-function loadPageCode () {
-//Load page code
-editor.getSession().setValue(document.getElementById('pageContainer').innerHTML);
-}
 
 loadPageCode();
+}
+
+function loadPageCode() {
+//Load page code
+editor.getSession().setValue(document.getElementById('pageContainer').innerHTML.toString());
+}
 
 //Update page code
 editor.addEventListener("input", function () {
@@ -33,6 +35,6 @@ editor.addEventListener("input", function () {
 });
 
 function reloadPageCode () {
-loadPageCode();
+		loadPageCode();
 }
 
