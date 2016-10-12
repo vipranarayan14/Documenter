@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="Styles/print.css" media="print">
     
     <script src="Scripts/script.js"></script>   
+    <script src="Scripts/saver.js"></script>
     <script src="AceEditor/ace/ace.js"></script>
     <script src="AceEditor/ace/ext-language_tools.js"></script>
     
@@ -19,6 +20,10 @@
      <nav class="toolBar">    
         <div class="tool editorToggler"><button onclick="toggleEditor()">Toggle Editor</button></div>
         <div class="tool"><button onclick="saveChanges()">Save</button></div>
+        <div class="tool">
+        <button onclick="saveDocAsHTML()">Download</button>
+        <!-- this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML) -->
+			</div>
         <div class="tool pagesPrinter"><button onclick="printPages()">Print</button></div>
         <div class="tool"><button onclick="emptyLocalStorage()">Clear Storage</button></div>
      </nav>

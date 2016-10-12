@@ -96,6 +96,14 @@ function printPages() {
     document.getElementById('editorPad').style.display = "none";
 }
 
+function saveDocAsHTML() {
+
+		var body = document.getElementById('pageContainer').innerHTML;
+		var html = '<html><head>' + styles + '</head><body>' + body + '<body></html>';
+		var uri = "data:text/html," + encodeURIComponent(html);
+		var newWindow = window.open(uri);
+}
+
 function exc(a,b) {
 
 		document.execCommand(a,false,b);
