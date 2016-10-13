@@ -1,3 +1,18 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
 h1, h2, h3, h4, h5, h6 {
     display: block;
     margin-top: 0;
@@ -10,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 hr {
 	border-top: 2px solid #000;
 }
+
 table {
   width: 100%;  
   border: solid thin; 
@@ -18,21 +34,26 @@ table {
 table caption { 
   padding-bottom: 0.5em; 
 }
+
 table th, 
 table td { 
   border: solid thin;
   padding: 0.2rem 1rem;
 }
+
 table td {
   white-space: nowrap;
 }
+
 table th { 
   font-weight: normal; 
 }
+
 table td { 
   border-style: solid thin; 
   vertical-align: center; 
 }
+
 table th { 
   text-decoration: bold;
   padding: 0.5em; 

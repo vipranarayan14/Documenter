@@ -1,0 +1,36 @@
+.pagesContainer {   
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    /* background-color: green; */
+    background-color: rgb(204, 204, 204);
+}
+
+.page {
+    display: flex;
+    max-height: 297mm;
+    max-width: 210mm;
+    min-height: 297mm;
+    min-width: 210mm;
+    margin: auto;
+    page-break-inside: avoid;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    font-family: 'Vesper Libre', serif;
+}
+
+.pageBorder {
+    height: 284.3; 
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 12.7mm;
+    padding: 5.08mm;
+    border: 1px solid black;
+}
+
+.content {
+		height: 100%;
+}

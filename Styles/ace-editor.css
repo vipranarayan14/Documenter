@@ -1,0 +1,15 @@
+.editor {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    width: 95%;
+    background-color: #0094FF;
+    border-radius: 5px;
+    margin: auto;
+    
+}
+.codeInput {
+    height: 90%;
+    width: 95%;
+    margin: auto;
+}

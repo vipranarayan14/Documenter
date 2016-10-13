@@ -1,0 +1,41 @@
+@import 'https://fonts.googleapis.com/css?family=Vesper+Libre';
+
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 95%;
+    /* background-color: #f05464; */
+    background-color: rgb(204, 204, 204);
+}
+.toolBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    margin: auto;
+    background: #FF9800;
+}
+.tool button, select {
+    height: 80%;
+    margin-left: 10px;
+}
+
+.pad {    
+    height: 100%;
+    margin: auto;
+}
+
+.viewerPad {
+    overflow: scroll;
+    flex-grow: 1;
+    width: 65%;
+    /* background-color: red; */
+    background-color: transparent;
+}
+.editorPad {
+    width: 35%;
+    background-color: transparent;
+    display:none;
+}
