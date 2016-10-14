@@ -73,7 +73,7 @@ function insertNewPage() {
 									"<div class='content'>" +
 									"</div></div></div>";
 		document.querySelector('#pageContainer').insertAdjacentHTML('beforeEnd', newPage);
-		setContentEditable();
+		setContentEditable(true);
 }
 function retrieveChanges () {
 
