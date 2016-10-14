@@ -12,6 +12,11 @@ window.addEventListener('keydown', function(e) {
         printPages();
         reloadPageCode();
     }
+    
+    if(e.ctrlKey && e.keyCode === 13) {
+        e.preventDefault();
+        insertNewPage();
+    }
 });
 
 function initiateApp() {
