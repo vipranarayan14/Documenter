@@ -20,14 +20,14 @@ function initiateApp() {
 		} else {
 			createNewDocument();
 		}
-		setContentEditable();
+		setContentEditable(true);
 }
 
-function setContentEditable() {
+function setContentEditable(bool) {
 		var pageContents = document.querySelectorAll('.content');
 		for (var i=0; i < pageContents.length; i++) {
 		
-				pageContents[i].setAttribute('contenteditable',true);
+				pageContents[i].setAttribute('contenteditable',bool);
 		}
 }
 
@@ -63,7 +63,7 @@ function createNewDocument() {
 
 	document.querySelector('#pageContainer').innerHTML = "";
 	insertNewPage();
-	setContentEditable();
+	setContentEditable(true);
 }
 
 function insertNewPage() {
@@ -96,12 +96,36 @@ function printPages() {
     document.getElementById('editorPad').style.display = "none";
 }
 
-function saveDocAsHTML() {
+function saveDocAsHTML() {	
+		
+		var pages = document.getElementById('pageContainer').innerHTML;
 
-		var body = document.getElementById('pageContainer').innerHTML;
-		var html = '<html><head>' + styles + '</head><body>' + body + '<body></html>';
-		var uri = "data:text/html," + encodeURIComponent(html);
-		var newWindow = window.open(uri);
+		var html = '<html>' + 
+							 '<head>' + 
+							 '<link rel="stylesheet" type="text/css" href="Styles/index.css">' +
+							 '<style>body {background-color: rgb(204, 204, 204);}</style>' +
+							 '</head>'+
+							 '<body>'+ pages +'</body></html>';		
+		
+		download(html, "document.html", "text/html");
+		
+		
+
+    
+}
+function getPageStyles() {
+var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function(){
+          var text = reader.result;
+          var node = document.getElementById('output');
+          node.innerText = text;
+          console.log(reader.result.substring(0, 200));
+        };
+        reader.readAsText(input.files[0]);
+      };
 }
 
 function exc(a,b) {
@@ -115,6 +139,31 @@ function putHTML() {
     if(selectedTxt) {
         exc('insertHTML', selectedTxt);
     }
+}
+
+function setLang(langCode) {
+
+    var selectedTxt = window.getSelection();
+    var rawTxt = selectedTxt.toString().trim();
+    
+    if(selectedTxt && langCode !== 'def'|| '') {
+    
+    		var langTxt = '<span lang="' + langCode + '" >' + rawTxt + '</span>';
+    		    	
+        exc('insertHTML', langTxt); 
+    }
+    else if(langCode === 'def') {
+    var parentEle = selectedTxt.focusNode.parentElement;
+    var isTag = selectedTxt.focusNode.parentElement.tagName == 'SPAN';
+    var hasAttrb = selectedTxt.focusNode.parentElement.hasAttribute('LANG');
+    
+    	if (isTag && hasAttrb) {
+    			parentEle.outerHTML = rawTxt;
+    	 }
+    }
+}
+function resetVal(select) {
+	select.selectedIndex = 0;
 }
 function formatTxt(txtFormat) {
 

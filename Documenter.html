@@ -4,9 +4,7 @@
 <head>
     <title>Documenter</title>
     
-    <link rel="stylesheet" type="text/css" href="Styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="Styles/default.css">
-    <link rel="stylesheet" type="text/css" href="Styles/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="Styles/index.css">
     
     <script src="Scripts/script.js"></script>   
     <script src="Scripts/saver.js"></script>
@@ -37,6 +35,8 @@
         <button onclick="exc('justifyLeft')">Left</button>
         <button onclick="exc('justifyCenter')">Center</button>
         <button onclick="exc('justifyRight')">Right</button>
+        <button onclick="exc('indent')">Indent</button>
+        <button onclick="exc('outdent')">Outdent</button>
         </div>
         <div class="tool putHeading">
         <select onchange="formatTxt(this.value)">
@@ -48,6 +48,14 @@
         <option value="h4">Heading 4</option>
         <option value="h5">Heading 5</option>
         <option value="h6">Heading 6</option>
+        </select>
+        </div>
+        <div class="tool setLang">
+        <select onchange="setLang(this.value)" onblur="resetVal(this)">
+        <option value="">Select Formatting...</option>
+        <option value="def">Default</option>
+        <option value="sa">Sanskrit</option>
+        <option value="ta">Tamil</option>
         </select>
         </div>
         <div class="tool"><button onclick="putHTML()">Insert HTML</button></div>

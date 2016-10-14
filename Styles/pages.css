@@ -18,11 +18,10 @@
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
-    font-family: 'Vesper Libre', serif;
 }
 
 .pageBorder {
-    height: 284.3; 
+    /*height: 284.3; */
     width: 100%;
     max-width: 100%;
     overflow: hidden;
@@ -33,4 +32,8 @@
 
 .content {
 		height: 100%;
+}
+.aligner th,
+.aligner td {
+		border: none;
 }

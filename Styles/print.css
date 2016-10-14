@@ -2,10 +2,15 @@
     size: A4;
 }
 body {
-    background-color: white;
+    background-color: transparent;
     padding: 0;
     margin: 0;
 }
 .page {
     margin: 0;
+    box-shadow: 0;
+}
+.pagesContainer { 
+		background-color: transparent;
+		
 }

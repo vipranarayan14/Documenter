@@ -1,5 +1,7 @@
 @import 'print.css' print;
 
+@import 'fonts.css';
+
 @import 'default.css';
 @import 'documenter.css';
 @import 'pages.css';
