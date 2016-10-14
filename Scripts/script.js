@@ -90,6 +90,7 @@ function printPages() {
 
     var restorepage = document.body.innerHTML;
     var printcontent = document.getElementById('pageContainer').innerHTML;
+    console.log(printcontent);
     document.body.innerHTML = printcontent;
     window.print();
     document.body.innerHTML = restorepage;
@@ -103,7 +104,7 @@ function saveDocAsHTML() {
 		var html = '<html>' + 
 							 '<head>' + 
 							 '<link rel="stylesheet" type="text/css" href="Styles/index.css">' +
-							 '<style>body {background-color: rgb(204, 204, 204);}</style>' +
+							 '<style media="screen">body {background-color: rgb(204, 204, 204);}</style>' +
 							 '</head>'+
 							 '<body>'+ pages +'</body></html>';		
 		
