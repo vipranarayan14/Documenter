@@ -19,12 +19,18 @@
      <nav class="toolBar">    
         <div class="tool editorToggler"><button onclick="toggleEditor()">Toggle Editor</button></div>
         <div class="tool"><button onclick="saveChanges()">Save</button></div>
-        <div class="tool">
-        <button onclick="saveDocAsHTML()">Download</button>
-        <!-- this.href='data:text/html;charset=UTF-8,'+encodeURIComponent(document.documentElement.outerHTML) -->
-			</div>
+        <div class="tool"><button onclick="saveDocAsHTML()">Download</button></div>
         <div class="tool pagesPrinter"><button onclick="printPages()">Print</button></div>
         <div class="tool"><button onclick="emptyLocalStorage()">Clear Storage</button></div>
+        <div class="tool">
+        <input id="pageZoomer" 
+        				type="range" 
+        				max="200" 
+        				min="50" 
+        				step="10" 
+        				onchange="zoomPage(this.value)">
+        <button onclick="zoomPage(150)">Fit</button>
+        </div>
      </nav>
         
      <nav class="toolBar">
@@ -77,7 +83,7 @@
         
         <!-- Viewer -->
         <div class="pad viewerPad">
-            <div id="pageContainer" class="pagesContainer">                
+            <div id="pageContainer" class="pageContainer">                
             </div>
         </div>
     </div>

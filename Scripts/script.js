@@ -90,7 +90,6 @@ function printPages() {
 
     var restorepage = document.body.innerHTML;
     var printcontent = document.getElementById('pageContainer').innerHTML;
-    console.log(printcontent);
     document.body.innerHTML = printcontent;
     window.print();
     document.body.innerHTML = restorepage;
@@ -172,3 +171,8 @@ function formatTxt(txtFormat) {
 		exc('formatBlock','<' + txtFormat + '>');
 		}
 }
+
+function zoomPage(zoomVal) {
+		document.querySelector('#pageContainer').style.zoom = zoomVal + "%";
+}
+
