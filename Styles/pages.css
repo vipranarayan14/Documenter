@@ -1,11 +1,9 @@
-.pageContainer {
-		   
+.pageContainer {		   
     height: 100%;
     width: 95%;
     margin: auto;
     /* background-color: green; */
     background-color: rgb(204, 204, 204);
-    padding-top: 10px;
 }
 
 .page {
@@ -18,7 +16,8 @@
     margin: auto;
     page-break-inside: avoid;
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
 }
 

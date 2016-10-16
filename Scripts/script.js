@@ -17,6 +17,11 @@ window.addEventListener('keydown', function(e) {
         e.preventDefault();
         insertNewPage();
     }
+    
+    if(e.keyCode == 9){
+    		e.preventDefault();
+    		document.execCommand('insertHTML',false, '&nbsp;&nbsp;&nbsp;&nbsp;');  
+  	}
 });
 
 function initiateApp() {
@@ -107,7 +112,7 @@ function saveDocAsHTML() {
 
 		var html = '<html>' + 
 							 '<head>' + 
-							 '<link rel="stylesheet" type="text/css" href="Styles/index.css">' +
+							 '<link rel="stylesheet" type="text/css" href="../Styles/index.css">' +
 							 '<style media="screen">body {background-color: rgb(204, 204, 204);}</style>' +
 							 '</head>'+
 							 '<body>'+ pages +'</body></html>';		

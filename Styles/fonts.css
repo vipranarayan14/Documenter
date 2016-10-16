@@ -12,4 +12,5 @@ span:lang(sa), .content {
 span:lang(ta) {
 		font-family: 'Arima Madurai', cursive;
 		font-size: 12px;
+		font-weight: bold;
 }
